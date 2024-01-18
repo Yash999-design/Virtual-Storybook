@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swipable Carousel - Tinder Style</title>
+  <!-- Include Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .swiper-container {
+      width: 300px;
+      /* Set the width of the swiper container */
+      height: 500px;
+      /* Set the height of the swiper container */
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .swiper-slide {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Swiper Container -->
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <h1>Person 1</h1>
+        <img src="https://placekitten.com/200/300" alt="Person 1">
+      </div>
+      <div class="swiper-slide">
+        <h1>Person 2</h1>
+        <img src="https://placekitten.com/201/300" alt="Person 2">
+      </div>
+      <div class="swiper-slide">
+        <h1>Person 3</h1>
+        <img src="https://placekitten.com/202/300" alt="Person 3">
+      </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Include Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+</body>
+
+</html>
