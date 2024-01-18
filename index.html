@@ -13,13 +13,17 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      height: 100%;
+      background-color: #f0f0f0;
+    }
+
+    .main-container {
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      background-color: #f0f0f0;
     }
-    
+
     .swiper-container {
       width: 300px;
       /* Set the width of the swiper container */
@@ -44,27 +48,28 @@
 </head>
 
 <body>
-
-  <!-- Swiper Container -->
-  <div class="swiper-container">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">
-        <img src="https://placekitten.com/200/300" alt="Person 1">
-        <h1>Person 1</h1>
+  <div class="main-container">
+    <!-- Swiper Container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="https://placekitten.com/200/300" alt="Person 1">
+          <h1>Person 1</h1>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://placekitten.com/201/300" alt="Person 2">
+          <h1>Person 2</h1>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://placekitten.com/202/300" alt="Person 3">
+          <h1>Person 3</h1>
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img src="https://placekitten.com/201/300" alt="Person 2">
-        <h1>Person 2</h1>
-      </div>
-      <div class="swiper-slide">
-        <img src="https://placekitten.com/202/300" alt="Person 3">
-        <h1>Person 3</h1>
-      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
   </div>
 
   <!-- Include Swiper JS -->
